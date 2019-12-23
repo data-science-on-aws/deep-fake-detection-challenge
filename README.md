@@ -27,7 +27,6 @@
 * Select the S3 Bucket Created Above
 * Select “Jupyter” or “JupyterLab” to Launch the Notebook
 * Connect to GitHub/GitLab repo to access notebooks (Follow the instructions [here](https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-notebooks-now-support-git-integration-for-increased-persistence-collaboration-and-reproducibility/) to connect to a private GitHub/GitLab repo!)
-* See this [sample notebook]() that uses the Amazon Customer Reviews Dataset
 
 ## Noteboook examples using Tensorflow/Keras
 * https://docs.aws.amazon.com/sagemaker/latest/dg/tf.html
@@ -36,6 +35,7 @@
 * https://docs.aws.amazon.com/sagemaker/latest/dg/pytorch.html
 
 ## Step 7. Run the Notebook
+* Run this MNIST [sample notebook](examples/script/tensorflow_distributed_mnist.ipynb) using Tensorflow Distributed Training and SageMaker Script Mode.
 
 ## Step 8. Convert the Notebook to a Docker Image
 
