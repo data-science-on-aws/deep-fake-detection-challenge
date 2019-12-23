@@ -18,9 +18,8 @@
 * AWS [Deep Learning AMIs](https://docs.aws.amazon.com/dlami/latest/devguide/what-is-dlami.html)
 
 ## Step 5. Manage/increase SageMaker Service Limits
-* https://aws.amazon.com/premiumsupport/knowledge-center/manage-service-limits/ 
-ml.p3.* instance types use V100 (not P100!)
-* See https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements
+* Check [default Amazon SageMaker Service Limits](https://docs.aws.amazon.com/general/latest/gr/sagemaker.html#limits_sagemaker)
+* Open support ticket to [manage service limits](https://aws.amazon.com/premiumsupport/knowledge-center/manage-service-limits/)
 
 ## Step 6. Create a SageMaker Notebook
 * Select Instance Type (TODO:  describe the defaults)
