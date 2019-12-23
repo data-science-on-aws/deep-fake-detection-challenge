@@ -10,19 +10,19 @@
 ## Step 4. Choose your Region
 * Amazon SageMaker [supported regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#sagemaker_region)
 
-## Introduction to [SageMaker Instance Types](https://aws.amazon.com/sagemaker/pricing/instance-types/)
-* Check Kaggle competition code requirements https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements
+## Introduction to SageMaker Instance Types
+* List of [SageMaker Instance Types](https://aws.amazon.com/sagemaker/pricing/instance-types/)
+* Check to comply with Kaggle competition code requirements https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements
 
 ## Introduction to Deep Learning AMIs
-* 
+* AWS [Deep Learning AMIs](https://docs.aws.amazon.com/dlami/latest/devguide/what-is-dlami.html)
 
-## Manage/increase SageMaker Service Limits
+## Step 5. Manage/increase SageMaker Service Limits
 * https://aws.amazon.com/premiumsupport/knowledge-center/manage-service-limits/ 
 ml.p3.* instance types use V100 (not P100!)
 * See https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements
 
-
-## Create a SageMaker Notebook
+## Step 6. Create a SageMaker Notebook
 * Select Instance Type (TODO:  describe the defaults)
 * Select “Create a New IAM Role”
 * Select the S3 Bucket Created Above
