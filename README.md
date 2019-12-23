@@ -27,7 +27,7 @@
 * Select the S3 Bucket Created Above
 * Select “Jupyter” or “JupyterLab” to Launch the Notebook
 * Connect to GitHub/GitLab repo to access notebooks (Follow the instructions [here](https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-notebooks-now-support-git-integration-for-increased-persistence-collaboration-and-reproducibility/) to connect to a private GitHub/GitLab repo!)
-* Provide sample notebook that uses Amazon Customer Reviews Dataset in public repo, but also include private repo instructions
+* See this [sample notebook]() that uses the Amazon Customer Reviews Dataset
 
 ## Recommendations for using Tensorflow/Keras
 ## Recommendations for using PyTorch
