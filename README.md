@@ -1,16 +1,23 @@
 ## Step 1. Create and activate an AWS Account
 * https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/ 
+
 ## Step 2. Apply the AWS Credits
 * https://aws.amazon.com/awscredits/  
+
 ## Step 3. Choose your Region
-## Introduction to SageMaker Instance Types (https://aws.amazon.com/sagemaker/pricing/instance-types/)
-https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements ^^ P100 vs. V100
+
+## Introduction to [SageMaker Instance Types](https://aws.amazon.com/sagemaker/pricing/instance-types/)
+* Check Kaggle competition code requirements https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements
+
 ## Introduction to Deep Learning AMIs
+
 ## Manage/increase SageMaker Service Limits
 * https://aws.amazon.com/premiumsupport/knowledge-center/manage-service-limits/ 
 ml.p3.* instance types use V100 (not P100!)
 * See https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements
+
 ## Create an S3 Bucket
+
 ## Create a SageMaker Notebook
 * Select Instance Type (TODO:  describe the defaults)
 * Select “Create a New IAM Role”
