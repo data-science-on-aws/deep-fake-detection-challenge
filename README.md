@@ -35,14 +35,20 @@
 ## Notebook examples using PyTorch
 * https://docs.aws.amazon.com/sagemaker/latest/dg/pytorch.html
 
-## Run the Notebook
+## Step 7. Run the Notebook
 
-## Convert the Notebook to a Docker Image
+## Step 8. Convert the Notebook to a Docker Image
 * TODO:  Figure out these instructions
-## Run the Docker Image as a SageMaker Training Job on a Single Node / Instance
-## Run the Docker Image as a SageMaker Training Job on a Multiple Nodes / Instances
+
+## Step 9. Option 1 - Run the Docker Image as a SageMaker Training Job on a Single Node / Instance
+
+## Step 9. Option 2 - Run the Docker Image as a SageMaker Training Job on a Multiple Nodes / Instances
+
 ### Fully Replicated - Full Copy from S3 Bucket to Each Node / Instance
 * TODO:  Add images from doc
+
 ### Sharded by S3 Key - Different Chunks of Data Copied from S3 Bucket to Each Node / Instance
 * TODO:  Add images from doc
-## Submit to https://deepfakedetectionchallenge.ai/
+
+## Step 10. Submit your notebook 
+* https://deepfakedetectionchallenge.ai/
