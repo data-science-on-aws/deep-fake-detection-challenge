@@ -26,8 +26,9 @@
 * Select “Create a New IAM Role”
 * Select the S3 Bucket Created Above
 * Select “Jupyter” or “JupyterLab” to Launch the Notebook
-* Connect to GitHub/GitLab Repo to Access Notebooks (TODO:  Private Repo?)
-* Provide sample notebook that uses Amazon Customer Reviews Dataset in Public Repo, but also include Private Repo instructions
+* Connect to GitHub/GitLab repo to access notebooks (Follow the instructions [here](https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-notebooks-now-support-git-integration-for-increased-persistence-collaboration-and-reproducibility/) to connect to a private GitHub/GitLab repo!)
+* Provide sample notebook that uses Amazon Customer Reviews Dataset in public repo, but also include private repo instructions
+
 ## Recommendations for using Tensorflow/Keras
 ## Recommendations for using PyTorch
 * https://docs.aws.amazon.com/sagemaker/latest/dg/pytorch.html
