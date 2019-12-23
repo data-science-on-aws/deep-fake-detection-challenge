@@ -19,10 +19,10 @@
 
 ## Step 5. Manage/increase SageMaker Service Limits
 * Check [default Amazon SageMaker Service Limits](https://docs.aws.amazon.com/general/latest/gr/sagemaker.html#limits_sagemaker)
-* Open support ticket to [manage service limits](https://aws.amazon.com/premiumsupport/knowledge-center/manage-service-limits/)
+* How to [request quota increase](https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html)
 
 ## Step 6. Create a SageMaker Notebook
-* Select Instance Type (TODO:  describe the defaults)
+* Select [Instance Type](https://aws.amazon.com/sagemaker/pricing/instance-types/)
 * Select “Create a New IAM Role”
 * Select the S3 Bucket Created Above
 * Select “Jupyter” or “JupyterLab” to Launch the Notebook
