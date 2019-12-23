@@ -30,7 +30,7 @@
 * See this [sample notebook]() that uses the Amazon Customer Reviews Dataset
 
 ## Noteboook examples using Tensorflow/Keras
-* 
+* https://docs.aws.amazon.com/sagemaker/latest/dg/tf.html
 
 ## Notebook examples using PyTorch
 * https://docs.aws.amazon.com/sagemaker/latest/dg/pytorch.html
