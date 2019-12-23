@@ -14,7 +14,7 @@
 * List of [SageMaker Instance Types](https://aws.amazon.com/sagemaker/pricing/instance-types/)
 * Check to comply with Kaggle competition code requirements https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements
 
-## Introduction to Deep Learning AMIs
+## Alternative to Amazon SageMaker: Introduction to Deep Learning AMIs
 * AWS [Deep Learning AMIs](https://docs.aws.amazon.com/dlami/latest/devguide/what-is-dlami.html)
 
 ## Step 5. Manage/increase SageMaker Service Limits
