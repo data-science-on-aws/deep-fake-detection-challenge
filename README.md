@@ -46,7 +46,7 @@
 * https://sagemaker.readthedocs.io/en/stable/using_tf.html#train-a-model-with-tensorflow
 
 ### Option 2 - on a Multiple Nodes / Instances
-https://github.com/awslabs/amazon-sagemaker-examples/tree/master/advanced_functionality/distributed_tensorflow_mask_rcnn
+* https://github.com/awslabs/amazon-sagemaker-examples/tree/master/advanced_functionality/distributed_tensorflow_mask_rcnn
 
 ### Fully Replicated - Full Copy from S3 Bucket to Each Node / Instance
 * TODO:  Add images from doc
