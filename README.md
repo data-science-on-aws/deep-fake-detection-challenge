@@ -36,7 +36,7 @@
 * Run this MNIST [sample notebook](examples/script/tensorflow_distributed_mnist.ipynb) using Tensorflow Distributed Training and SageMaker Script Mode.
 
 ## Step 8. Convert the Notebook to a `train.py` File in Docker Image
-* Run this [sample notebook](examples/sagemaker-container/notebook.ipynb)
+* Run this [sample notebook](examples/customer-sagemaker-container/notebook.ipynb)
 
 ## Step 9. Run the Docker Image as a SageMaker Training Job
 
