@@ -1,8 +1,8 @@
-## Create and activate an AWS Account
+## Step 1. Create and activate an AWS Account
 * https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/ 
-## Apply the Credits
+## Step 2. Apply the AWS Credits
 * https://aws.amazon.com/awscredits/  
-## Choose the Region
+## Step 3. Choose your Region
 ## Introduction to SageMaker Instance Types (https://aws.amazon.com/sagemaker/pricing/instance-types/)
 https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements ^^ P100 vs. V100
 ## Introduction to Deep Learning AMIs
