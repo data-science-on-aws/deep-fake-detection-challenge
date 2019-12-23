@@ -7,13 +7,14 @@
 ## Step 3. Create a S3 Bucket
 * How to [create a S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bucket.html)
 
-## Step 3. Choose your Region
+## Step 4. Choose your Region
 * Amazon SageMaker [supported regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#sagemaker_region)
 
 ## Introduction to [SageMaker Instance Types](https://aws.amazon.com/sagemaker/pricing/instance-types/)
 * Check Kaggle competition code requirements https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements
 
 ## Introduction to Deep Learning AMIs
+* 
 
 ## Manage/increase SageMaker Service Limits
 * https://aws.amazon.com/premiumsupport/knowledge-center/manage-service-limits/ 
