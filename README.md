@@ -29,10 +29,14 @@
 * Connect to GitHub/GitLab repo to access notebooks (Follow the instructions [here](https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-notebooks-now-support-git-integration-for-increased-persistence-collaboration-and-reproducibility/) to connect to a private GitHub/GitLab repo!)
 * See this [sample notebook]() that uses the Amazon Customer Reviews Dataset
 
-## Recommendations for using Tensorflow/Keras
-## Recommendations for using PyTorch
+## Noteboook examples using Tensorflow/Keras
+* 
+
+## Notebook examples using PyTorch
 * https://docs.aws.amazon.com/sagemaker/latest/dg/pytorch.html
+
 ## Run the Notebook
+
 ## Convert the Notebook to a Docker Image
 * TODO:  Figure out these instructions
 ## Run the Docker Image as a SageMaker Training Job on a Single Node / Instance
