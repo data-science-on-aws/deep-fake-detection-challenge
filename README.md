@@ -27,7 +27,7 @@
 * Select the S3 Bucket Created Above
 * Select “Jupyter” or “JupyterLab” to Launch the Notebook
 * Connect to GitHub/GitLab repo to access notebooks 
-(Follow the instructions [here](https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-notebooks-now-support-git-integration-for-increased-persistence-collaboration-and-reproducibility/) to connect to a private GitHub/GitLab repo!)
+* (Follow the instructions [here](https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-notebooks-now-support-git-integration-for-increased-persistence-collaboration-and-reproducibility/) to connect to a private GitHub/GitLab repo!)
 
 ## Noteboook examples using Tensorflow/Keras
 * https://docs.aws.amazon.com/sagemaker/latest/dg/tf.html
