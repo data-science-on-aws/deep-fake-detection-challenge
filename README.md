@@ -40,9 +40,11 @@
 ## Step 8. Convert the Notebook to a Docker Image
 * TODO:  Figure out these instructions
 
-## Step 9. Option 1 - Run the Docker Image as a SageMaker Training Job on a Single Node / Instance
+## Step 9. Run the Docker Image as a SageMaker Training Job
 
-## Step 9. Option 2 - Run the Docker Image as a SageMaker Training Job on a Multiple Nodes / Instances
+### Option 1 - on a Single Node / Instance
+
+### Option 2 - on a Multiple Nodes / Instances
 
 ### Fully Replicated - Full Copy from S3 Bucket to Each Node / Instance
 * TODO:  Add images from doc
