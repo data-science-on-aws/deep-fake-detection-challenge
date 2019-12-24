@@ -37,6 +37,7 @@
 
 ## Step 8. Convert the Notebook to a `train.py` File in Docker Image
 * Run this [sample notebook](examples/custom-sagemaker-container/notebook.ipynb)
+* ![Parameter Server](parameter_server.png)
 
 ## Step 9. Run the Docker Image as a SageMaker Training Job
 
@@ -45,6 +46,9 @@
 
 ### Option 2:  Multiple Nodes / Instances
 * https://github.com/awslabs/amazon-sagemaker-examples/tree/master/advanced_functionality/distributed_tensorflow_mask_rcnn
+* ![Distributed Tensorflow](distributed_tf.png)
+* ![Multi Node Distribution](multi_node.png)
+* ![Incremental Retraining](incremental_retraining.png)
 
 ## Step 10. Submit your Notebook and `train.py`
 * https://deepfakedetectionchallenge.ai/
@@ -54,7 +58,7 @@
 * AWS [Deep Learning AMIs](https://docs.aws.amazon.com/dlami/latest/devguide/what-is-dlami.html)
 
 ### Fully Replicated - Full Copy from S3 Bucket to Each Node / Instance
-* TODO:  Add images from doc
+* ![Fully Replicated Data](fully_replicated.png)
 
 ### Sharded by S3 Key - Different Chunks of Data Copied from S3 Bucket to Each Node / Instance
-* TODO:  Add images from doc
+* ![Sharded by S3 key](sharded_s3.png)
