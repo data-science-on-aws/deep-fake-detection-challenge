@@ -12,7 +12,6 @@ import torch.optim as optim
 import torch.utils.data
 import torch.utils.data.distributed
 from torchvision import datasets, transforms
-import cli_pipeline
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -169,9 +168,7 @@ def save_model(model, model_dir):
 
 
 if __name__ == '__main__':
-    
-    print(cli_pipeline)
-    
+        
     parser = argparse.ArgumentParser()
 
     # Data and model checkpoints directories

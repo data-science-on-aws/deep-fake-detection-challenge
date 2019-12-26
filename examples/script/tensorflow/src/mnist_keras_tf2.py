@@ -16,7 +16,6 @@ import argparse
 import os
 import numpy as np
 import json
-import cli_pipeline
 
 
 def model(x_train, y_train, x_test, y_test):
@@ -68,7 +67,6 @@ def _parse_args():
 
 
 if __name__ == "__main__":
-    print('cli_pipeline:  {}'.format(cli_pipeline))
     
     args, unknown = _parse_args()
 
