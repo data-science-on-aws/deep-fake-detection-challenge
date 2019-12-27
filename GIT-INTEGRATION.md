@@ -1,6 +1,7 @@
 # Amazon SageMaker <> Git Integration
 
 See also: 
+
 https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html
 
 https://aws.amazon.com/blogs/machine-learning/git-integration-now-available-for-amazon-sagemaker-python-sdk/
