@@ -46,4 +46,4 @@ https://aws.amazon.com/blogs/machine-learning/git-integration-now-available-for-
 ## 4. Login to Jupyter instance
 
 ![](img/git10.png)
-![](img/git011.png)
+![](img/git11.png)
