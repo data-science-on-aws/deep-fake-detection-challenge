@@ -19,7 +19,7 @@
 * Select “Create a New IAM Role”
 * Select the S3 Bucket Created Above
 * Select “Jupyter” or “JupyterLab” to Launch the Notebook
-* Connect to a Public or Private GitHub or GitLab repo using [these](https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-notebooks-now-support-git-integration-for-increased-persistence-collaboration-and-reproducibility/) instructions.
+* Connect to a Public or Private GitHub or GitLab repo using [these](git-integration.md) instructions.
 
 ## Step 7. Train a Model using SageMaker Notebooks
 * Run this **TensorFlow** MNIST [sample notebook](tensorflow/) using Distributed TensorFlow and SageMaker in Script Mode.
