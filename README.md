@@ -5,23 +5,31 @@
 * https://aws.amazon.com/awscredits/  
 
 ## Step 3. Create an S3 Bucket
-* How to [create a S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bucket.html)
+* How to [Create an S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bucket.html)
 
 ## Step 4. Choose a Region
-* Amazon SageMaker [supported regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#sagemaker_region)
+* Amazon SageMaker [Supported Regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#sagemaker_region)
 
 ## Step 5. Manage/Increase SageMaker Service Limits
-* Check [default Amazon SageMaker Service Limits](https://docs.aws.amazon.com/general/latest/gr/sagemaker.html#limits_sagemaker)
-* How to [request quota increase](https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html)
+* Check [Default Amazon SageMaker Service Limits](https://docs.aws.amazon.com/general/latest/gr/sagemaker.html#limits_sagemaker)
+* How to [Request Limit Increase](https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html)
 
 ## Step 6. Create a SageMaker Notebook
 * Select [Instance Type](https://aws.amazon.com/sagemaker/pricing/instance-types/)
 * Select “Create a New IAM Role”
 * Select the S3 Bucket Created Above
 * Select “Jupyter” or “JupyterLab” to Launch the Notebook
-* Connect to GitHub/GitLab repo to access notebooks 
-* (Follow the instructions [here](https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-notebooks-now-support-git-integration-for-increased-persistence-collaboration-and-reproducibility/) to connect to a private GitHub/GitLab repo!)
+* Connect to a Public or Private GitHub or GitLab repo using [these](https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-notebooks-now-support-git-integration-for-increased-persistence-collaboration-and-reproducibility/) instructions.
 
+## Step 7. Train a Model using SageMaker Notebooks
+* Run this **TensorFlow** MNIST [sample notebook](tensorflow/) using Distributed TensorFlow and SageMaker in Script Mode.
+* Run this **PyTorch** MNIST [sample notebook](pytorch/) using **PyTorch** Distributed PyTorch and SageMaker in Script Mode.
+
+## Step 8. Submit your Notebook and Trained Model to Kaggle
+* https://deepfakedetectionchallenge.ai/
+
+## Extras
+## SageMaker Training
 ### Introduction to SageMaker Instance Types
 * List of [SageMaker Instance Types](https://aws.amazon.com/sagemaker/pricing/instance-types/)
 * Check to comply with Kaggle competition code requirements https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements
@@ -32,33 +40,26 @@
 ### Notebook Examples using PyTorch
 * https://docs.aws.amazon.com/sagemaker/latest/dg/pytorch.html
 
-## Step 7. Run the Notebook
-* Run this MNIST [sample notebook](examples/script/tensorflow_distributed_mnist.ipynb) using Tensorflow Distributed Training and SageMaker Script Mode.
-
-## Step 8. Convert the Notebook to a `train.py` File in Docker Image
-* Run this [sample notebook](examples/custom-sagemaker-container/notebook.ipynb)
-![Parameter Server](img/parameter_server.png)
-
-## Step 9. Run the Docker Image as a SageMaker Training Job
-
-### Option 1:  Single Node / Instance
+### Single Node SageMaker Training
 * https://sagemaker.readthedocs.io/en/stable/using_tf.html#train-a-model-with-tensorflow
 
-### Option 2:  Multiple Nodes / Instances
+### Multi-Node SageMaker Training
 * https://github.com/awslabs/amazon-sagemaker-examples/tree/master/advanced_functionality/distributed_tensorflow_mask_rcnn
 ![Distributed Tensorflow](img/distributed_tf.png)
 ![Multi Node Distribution](img/multi_node.png)
 ![Incremental Retraining](img/incremental_retraining.png)
-
-## Step 10. Submit your Notebook and `train.py`
-* https://deepfakedetectionchallenge.ai/
-
-## Extras
-### Alternative to Amazon SageMaker: Introduction to Deep Learning AMIs
-* AWS [Deep Learning AMIs](https://docs.aws.amazon.com/dlami/latest/devguide/what-is-dlami.html)
 
 ### Fully Replicated - Full Copy from S3 Bucket to Each Node / Instance
 ![Fully Replicated Data](img/fully_replicated.png)
 
 ### Sharded by S3 Key - Different Chunks of Data Copied from S3 Bucket to Each Node / Instance
 ![Sharded by S3 key](img/sharded_s3.png)
+
+## Custom SageMaker Containers 
+* Convert the Notebook to a `train.py` File in Docker Image
+* Run this [sample notebook](examples/custom-sagemaker-container/notebook.ipynb)
+![Parameter Server](img/parameter_server.png)
+* Run the Docker Image as a SageMaker Training Job
+
+## Alternative to Amazon SageMaker: Use Your Own Deep Learning AMIs
+* AWS [Deep Learning AMIs](https://docs.aws.amazon.com/dlami/latest/devguide/what-is-dlami.html)
