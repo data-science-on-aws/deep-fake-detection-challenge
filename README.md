@@ -51,25 +51,6 @@
 ### Notebook Examples using PyTorch
 * https://docs.aws.amazon.com/sagemaker/latest/dg/pytorch.html
 
-### Single Node SageMaker Training
-* https://sagemaker.readthedocs.io/en/stable/using_tf.html#train-a-model-with-tensorflow
-
-### Multi-Node SageMaker Training
-* https://github.com/awslabs/amazon-sagemaker-examples/tree/master/advanced_functionality/distributed_tensorflow_mask_rcnn
-![Distributed Tensorflow](img/distributed_tf.png)
-![Multi Node Distribution](img/multi_node.png)
-![Incremental Retraining](img/incremental_retraining.png)
-
-### Dataset is Fully Replicated
-The dataset is copied from S3 Bucket to each SageMaker worker.
-
-![Fully Replicated Data](img/fully_replicated.png)
-
-### Dataset is Sharded by S3 Key
-* Different partitions of the dataset are copied from S3 to each SageMaker worker as needed.
-
-![Sharded by S3 key](img/sharded_s3.png)
-
 ### Extend the SageMaker Docker Images
 * Convert the Notebook to a `train.py` File in Docker Image
 * Run this [sample notebook](examples/custom-sagemaker-container/notebook.ipynb)
