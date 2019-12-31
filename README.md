@@ -1,7 +1,7 @@
 ## Step 1. Create and Activate an AWS Account
 * https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/ 
 
-## Step 2. Apply the AWS Credits
+## Step 2. Apply AWS Credits (If Applicable)
 * https://aws.amazon.com/awscredits/  
 
 ## Step 3. Create an S3 Bucket
