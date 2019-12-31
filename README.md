@@ -29,7 +29,7 @@
 * [**Sample PyTorch notebook**](pytorch/) using Distributed PyTorch and SageMaker.
 
 ### Other
-* To adapt a custom training script to SageMaker, please follow [**these instructions**](https://sagemaker.readthedocs.io/en/stable/using_tf.html#adapting-your-local-tensorflow-scriptdocs).
+* To adapt a custom training script to SageMaker, please follow [**these instructions**](https://sagemaker.readthedocs.io/en/stable/using_tf.html#adapting-your-local-tensorflow-script).
 
 ## Step 8. Submit your Notebook and Trained Model to Kaggle
 * **Challenge Page**:  [https://deepfakedetectionchallenge.ai/](https://deepfakedetectionchallenge.ai/)
