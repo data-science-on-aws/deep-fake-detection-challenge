@@ -23,10 +23,10 @@
 
 ## Step 7. Train a Model using SageMaker Notebooks
 ### TensorFlow
-* Run [**sample TensorFlow notebook**](tensorflow/) using Distributed TensorFlow and SageMaker.
+* [**Sample TensorFlow notebook**](tensorflow/) using Distributed TensorFlow and SageMaker.
 
 ### PyTorch
-* Run this [**sample PyTorch notebook**](pytorch/) using Distributed PyTorch and SageMaker.
+* [**Sample PyTorch notebook**](pytorch/) using Distributed PyTorch and SageMaker.
 
 ### Other
 * To adapt a custom training script to SageMaker, please follow [**these instructions**](https://sagemaker.readthedocs.io/en/stable/using_tf.html#adapting-your-local-tensorflow-scriptdocs).
@@ -37,38 +37,35 @@
 * **Introduction**:  [https://www.kaggle.com/robikscube/kaggle-deepfake-detection-introduction](https://www.kaggle.com/robikscube/kaggle-deepfake-detection-introduction)
 * **Starter Kit**:  [https://www.kaggle.com/gpreda/deepfake-starter-kit](https://www.kaggle.com/gpreda/deepfake-starter-kit)
 
-### Related Links
-
 ## Extras
 ### AWS AI Blog
 * [https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/](https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/)
 
-### Amazon SageMaker
-#### Introduction to SageMaker Instance Types
+### Introduction to SageMaker Instance Types
 * List of [SageMaker Instance Types](https://aws.amazon.com/sagemaker/pricing/instance-types/)
 * Check to comply with Kaggle competition code requirements https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements
 
-#### Noteboook Examples using Tensorflow + Keras
+### Noteboook Examples using Tensorflow + Keras
 * https://docs.aws.amazon.com/sagemaker/latest/dg/tf.html
 
-#### Notebook Examples using PyTorch
+### Notebook Examples using PyTorch
 * https://docs.aws.amazon.com/sagemaker/latest/dg/pytorch.html
 
-#### Single Node SageMaker Training
+### Single Node SageMaker Training
 * https://sagemaker.readthedocs.io/en/stable/using_tf.html#train-a-model-with-tensorflow
 
-#### Multi-Node SageMaker Training
+### Multi-Node SageMaker Training
 * https://github.com/awslabs/amazon-sagemaker-examples/tree/master/advanced_functionality/distributed_tensorflow_mask_rcnn
 ![Distributed Tensorflow](img/distributed_tf.png)
 ![Multi Node Distribution](img/multi_node.png)
 ![Incremental Retraining](img/incremental_retraining.png)
 
-#### Dataset is Fully Replicated
+### Dataset is Fully Replicated
 The dataset is copied from S3 Bucket to each SageMaker worker.
 
 ![Fully Replicated Data](img/fully_replicated.png)
 
-#### Dataset is Sharded by S3 Key
+### Dataset is Sharded by S3 Key
 * Different partitions of the dataset are copied from S3 to each SageMaker worker as needed.
 
 ![Sharded by S3 key](img/sharded_s3.png)
