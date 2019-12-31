@@ -117,5 +117,10 @@ if __name__ == "__main__":
     print('hosts[0]:  {}'.format(args.hosts[0]))
     if args.current_host == args.hosts[0]:
         # save model to an S3 directory with version number '00000001'
-        mnist_classifier.save(os.path.join(args.sm_model_dir, '000000001'), 'sm_tensorflow_mnist.h5')
-        mnist_classifier.save(os.path.join('/opt/ml/model/', '000000001'), 'opt_tensorflow_mnist.h5')
+        mnist_classifier.save(os.path.join(args.sm_model_dir, '000000001'), './sm_tensorflow_mnist.h5')
+        mnist_classifier.save(os.path.join('/opt/ml/model/', '000000001'), './opt_tensorflow_mnist.h5')        
+        
+        # TODO:  Copy .h5 file to /opt/ml/model/ (backed by S3)
+        # import shutil
+        # shutil.copyfile('./sm_tensorflow_mnist.h5', '/opt/ml/model/000000001/sm_tensorflow_mnist.h5')
+        # shutil.copyfile('./opt_tensorflow_mnist.h5', '/opt/ml/model/000000001/opt_tensorflow_mnist.h5')
