@@ -29,7 +29,7 @@
 * [**Sample PyTorch Notebook**](pytorch/) using Distributed PyTorch and SageMaker.
 
 ### MXNet
-* **Sample MXNet notebook Coming Soon** using Distributed MXNet and SageMaker.
+* [**Sample MXNet Notebook**](mxnet/) using Distributed MXNet and SageMaker.
 
 ### Other
 * To adapt a custom training script to SageMaker, please follow [**these instructions**](https://sagemaker.readthedocs.io/en/stable/using_tf.html#adapting-your-local-tensorflow-script).
