@@ -46,7 +46,7 @@
 
 ### Introduction to SageMaker Instance Types
 * List of [SageMaker Instance Types](https://aws.amazon.com/sagemaker/pricing/instance-types/)
-* Check to comply with Kaggle competition code requirements https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements
+* Check to Comply with Kaggle [Competition Code Requirements](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
 
 ### Noteboook Examples using Tensorflow + Keras
 * https://docs.aws.amazon.com/sagemaker/latest/dg/tf.html
