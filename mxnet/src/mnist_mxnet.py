@@ -1,198 +1,126 @@
 import argparse
+import gzip
 import json
 import logging
 import os
-import sys
-import torch
-import torch.distributed as dist
-import torch.nn as nn
-import torch.nn.functional as F
-import torch.optim as optim
-import torch.utils.data
-import torch.utils.data.distributed
-from torchvision import datasets, transforms
+import struct
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
-logger.addHandler(logging.StreamHandler(sys.stdout))
+import mxnet as mx
+import numpy as np
 
 
-# Based on https://github.com/pytorch/examples/blob/master/mnist/main.py
-class Net(nn.Module):
-    def __init__(self):
-        super(Net, self).__init__()
-        self.conv1 = nn.Conv2d(1, 10, kernel_size=5)
-        self.conv2 = nn.Conv2d(10, 20, kernel_size=5)
-        self.conv2_drop = nn.Dropout2d()
-        self.fc1 = nn.Linear(320, 50)
-        self.fc2 = nn.Linear(50, 10)
-
-    def forward(self, x):
-        x = F.relu(F.max_pool2d(self.conv1(x), 2))
-        x = F.relu(F.max_pool2d(self.conv2_drop(self.conv2(x)), 2))
-        x = x.view(-1, 320)
-        x = F.relu(self.fc1(x))
-        x = F.dropout(x, training=self.training)
-        x = self.fc2(x)
-        return F.log_softmax(x, dim=1)
+def load_data(path):
+    with gzip.open(find_file(path, "labels.gz")) as flbl:
+        struct.unpack(">II", flbl.read(8))
+        labels = np.fromstring(flbl.read(), dtype=np.int8)
+    with gzip.open(find_file(path, "images.gz")) as fimg:
+        _, _, rows, cols = struct.unpack(">IIII", fimg.read(16))
+        images = np.fromstring(fimg.read(), dtype=np.uint8).reshape(len(labels), rows, cols)
+        images = images.reshape(images.shape[0], 1, 28, 28).astype(np.float32) / 255
+    return labels, images
 
 
-def _get_train_data_loader(batch_size, training_dir, is_distributed, **kwargs):
-    logger.info("Get train data loader")
-    dataset = datasets.MNIST(training_dir, train=True, transform=transforms.Compose([
-        transforms.ToTensor(),
-        transforms.Normalize((0.1307,), (0.3081,))
-    ]))
-    train_sampler = torch.utils.data.distributed.DistributedSampler(dataset) if is_distributed else None
-    return torch.utils.data.DataLoader(dataset, batch_size=batch_size, shuffle=train_sampler is None,
-                                       sampler=train_sampler, **kwargs)
+def find_file(root_path, file_name):
+    for root, dirs, files in os.walk(root_path):
+        if file_name in files:
+            return os.path.join(root, file_name)
 
 
-def _get_test_data_loader(test_batch_size, training_dir, **kwargs):
-    logger.info("Get test data loader")
-    return torch.utils.data.DataLoader(
-        datasets.MNIST(training_dir, train=False, transform=transforms.Compose([
-            transforms.ToTensor(),
-            transforms.Normalize((0.1307,), (0.3081,))
-        ])),
-        batch_size=test_batch_size, shuffle=True, **kwargs)
+def build_graph():
+    data = mx.sym.var('data')
+    data = mx.sym.flatten(data=data)
+    fc1 = mx.sym.FullyConnected(data=data, num_hidden=128)
+    act1 = mx.sym.Activation(data=fc1, act_type="relu")
+    fc2 = mx.sym.FullyConnected(data=act1, num_hidden=64)
+    act2 = mx.sym.Activation(data=fc2, act_type="relu")
+    fc3 = mx.sym.FullyConnected(data=act2, num_hidden=10)
+    return mx.sym.SoftmaxOutput(data=fc3, name='softmax')
 
 
-def _average_gradients(model):
-    # Gradient averaging.
-    size = float(dist.get_world_size())
-    for param in model.parameters():
-        dist.all_reduce(param.grad.data, op=dist.reduce_op.SUM)
-        param.grad.data /= size
-
-
-def train(args):
-    is_distributed = len(args.hosts) > 1 and args.backend is not None
-    logger.debug("Distributed training - {}".format(is_distributed))
-    use_cuda = args.num_gpus > 0
-    logger.debug("Number of gpus available - {}".format(args.num_gpus))
-    kwargs = {'num_workers': 1, 'pin_memory': True} if use_cuda else {}
-    device = torch.device("cuda" if use_cuda else "cpu")
-
-    if is_distributed:
-        # Initialize the distributed environment.
-        world_size = len(args.hosts)
-        os.environ['WORLD_SIZE'] = str(world_size)
-        host_rank = args.hosts.index(args.current_host)
-        os.environ['RANK'] = str(host_rank)
-        dist.init_process_group(backend=args.backend, rank=host_rank, world_size=world_size)
-        logger.info('Initialized the distributed environment: \'{}\' backend on {} nodes. '.format(
-            args.backend, dist.get_world_size()) + 'Current host rank is {}. Number of gpus: {}'.format(
-            dist.get_rank(), args.num_gpus))
-
-    # set the seed for generating random numbers
-    torch.manual_seed(args.seed)
-    if use_cuda:
-        torch.cuda.manual_seed(args.seed)
-
-    train_loader = _get_train_data_loader(args.batch_size, args.data_dir, is_distributed, **kwargs)
-    test_loader = _get_test_data_loader(args.test_batch_size, args.data_dir, **kwargs)
-
-    logger.debug("Processes {}/{} ({:.0f}%) of train data".format(
-        len(train_loader.sampler), len(train_loader.dataset),
-        100. * len(train_loader.sampler) / len(train_loader.dataset)
-    ))
-
-    logger.debug("Processes {}/{} ({:.0f}%) of test data".format(
-        len(test_loader.sampler), len(test_loader.dataset),
-        100. * len(test_loader.sampler) / len(test_loader.dataset)
-    ))
-
-    model = Net().to(device)
-    if is_distributed and use_cuda:
-        # multi-machine multi-gpu case
-        model = torch.nn.parallel.DistributedDataParallel(model)
+def get_training_context(num_gpus):
+    if num_gpus:
+        return [mx.gpu(i) for i in range(num_gpus)]
     else:
-        # single-machine multi-gpu case or single-machine or multi-machine cpu case
-        model = torch.nn.DataParallel(model)
-
-    optimizer = optim.SGD(model.parameters(), lr=args.lr, momentum=args.momentum)
-
-    for epoch in range(1, args.epochs + 1):
-        model.train()
-        for batch_idx, (data, target) in enumerate(train_loader, 1):
-            data, target = data.to(device), target.to(device)
-            optimizer.zero_grad()
-            output = model(data)
-            loss = F.nll_loss(output, target)
-            loss.backward()
-            if is_distributed and not use_cuda:
-                # average gradients manually for multi-machine cpu case only
-                _average_gradients(model)
-            optimizer.step()
-            if batch_idx % args.log_interval == 0:
-                logger.info('Train Epoch: {} [{}/{} ({:.0f}%)] Loss: {:.6f}'.format(
-                    epoch, batch_idx * len(data), len(train_loader.sampler),
-                    100. * batch_idx / len(train_loader), loss.item()))
-        test(model, test_loader, device)
-    save_model(model, args.model_dir)
+        return mx.cpu()
 
 
-def test(model, test_loader, device):
-    model.eval()
-    test_loss = 0
-    correct = 0
-    with torch.no_grad():
-        for data, target in test_loader:
-            data, target = data.to(device), target.to(device)
-            output = model(data)
-            test_loss += F.nll_loss(output, target, size_average=False).item()  # sum up batch loss
-            pred = output.max(1, keepdim=True)[1]  # get the index of the max log-probability
-            correct += pred.eq(target.view_as(pred)).sum().item()
+def train(batch_size, epochs, learning_rate, num_gpus, training_channel, testing_channel,
+          hosts, current_host, model_dir):
+    (train_labels, train_images) = load_data(training_channel)
+    (test_labels, test_images) = load_data(testing_channel)
+    CHECKPOINTS_DIR = '/opt/ml/checkpoints'
+    checkpoints_enabled = os.path.exists(CHECKPOINTS_DIR)
 
-    test_loss /= len(test_loader.dataset)
-    logger.info('Test set: Average loss: {:.4f}, Accuracy: {}/{} ({:.0f}%)\n'.format(
-        test_loss, correct, len(test_loader.dataset),
-        100. * correct / len(test_loader.dataset)))
+    # Data parallel training - shard the data so each host
+    # only trains on a subset of the total data.
+    shard_size = len(train_images) // len(hosts)
+    for i, host in enumerate(hosts):
+        if host == current_host:
+            start = shard_size * i
+            end = start + shard_size
+            break
+
+    train_iter = mx.io.NDArrayIter(train_images[start:end], train_labels[start:end], batch_size,
+                                   shuffle=True)
+    val_iter = mx.io.NDArrayIter(test_images, test_labels, batch_size)
+
+    logging.getLogger().setLevel(logging.DEBUG)
+
+    kvstore = 'local' if len(hosts) == 1 else 'dist_sync'
+
+    mlp_model = mx.mod.Module(symbol=build_graph(),
+                              context=get_training_context(num_gpus))
+
+    checkpoint_callback = None
+    if checkpoints_enabled:
+        # Create a checkpoint callback that checkpoints the model params and the optimizer state after every epoch at the given path.
+        checkpoint_callback = mx.callback.module_checkpoint(mlp_model,
+                                                            CHECKPOINTS_DIR + "/mnist",
+                                                            period=1,
+                                                            save_optimizer_states=True)
+    mlp_model.fit(train_iter,
+                  eval_data=val_iter,
+                  kvstore=kvstore,
+                  optimizer='sgd',
+                  optimizer_params={'learning_rate': learning_rate},
+                  eval_metric='acc',
+                  epoch_end_callback = checkpoint_callback,
+                  batch_end_callback=mx.callback.Speedometer(batch_size, 100),
+                  num_epoch=epochs)
+
+    if current_host == hosts[0]:
+        save(model_dir, mlp_model)
 
 
-def model_fn(model_dir):
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = torch.nn.DataParallel(Net())
-    with open(os.path.join(model_dir, 'model.pth'), 'rb') as f:
-        model.load_state_dict(torch.load(f))
-    return model.to(device)
+def save(model_dir, model):
+    model.symbol.save(os.path.join(model_dir, 'model-symbol.json'))
+    model.save_params(os.path.join(model_dir, 'model-0000.params'))
+
+    signature = [{'name': data_desc.name, 'shape': [dim for dim in data_desc.shape]}
+                 for data_desc in model.data_shapes]
+    with open(os.path.join(model_dir, 'model-shapes.json'), 'w') as f:
+        json.dump(signature, f)
 
 
-def save_model(model, model_dir):
-    logger.info("Saving the model.")
-    path = os.path.join(model_dir, 'model.pth')
-    # recommended way from http://pytorch.org/docs/master/notes/serialization.html
-    torch.save(model.cpu().state_dict(), path)
-
-
-if __name__ == '__main__':
-        
+def parse_args():
     parser = argparse.ArgumentParser()
 
-    # Data and model checkpoints directories
-    parser.add_argument('--batch-size', type=int, default=64, metavar='N',
-                        help='input batch size for training (default: 64)')
-    parser.add_argument('--test-batch-size', type=int, default=1000, metavar='N',
-                        help='input batch size for testing (default: 1000)')
-    parser.add_argument('--epochs', type=int, default=10, metavar='N',
-                        help='number of epochs to train (default: 10)')
-    parser.add_argument('--lr', type=float, default=0.01, metavar='LR',
-                        help='learning rate (default: 0.01)')
-    parser.add_argument('--momentum', type=float, default=0.5, metavar='M',
-                        help='SGD momentum (default: 0.5)')
-    parser.add_argument('--seed', type=int, default=1, metavar='S',
-                        help='random seed (default: 1)')
-    parser.add_argument('--log-interval', type=int, default=100, metavar='N',
-                        help='how many batches to wait before logging training status')
-    parser.add_argument('--backend', type=str, default=None,
-                        help='backend for distributed training (tcp, gloo on cpu and gloo, nccl on gpu)')
+    parser.add_argument('--batch-size', type=int, default=100)
+    parser.add_argument('--epochs', type=int, default=10)
+    parser.add_argument('--learning-rate', type=float, default=0.1)
 
-    # Container environment
-    parser.add_argument('--hosts', type=list, default=json.loads(os.environ['SM_HOSTS']))
-    parser.add_argument('--current-host', type=str, default=os.environ['SM_CURRENT_HOST'])
     parser.add_argument('--model-dir', type=str, default=os.environ['SM_MODEL_DIR'])
-    parser.add_argument('--data-dir', type=str, default=os.environ['SM_CHANNEL_TRAINING'])
-    parser.add_argument('--num-gpus', type=int, default=os.environ['SM_NUM_GPUS'])
+    parser.add_argument('--train', type=str, default=os.environ['SM_CHANNEL_TRAIN'])
+    parser.add_argument('--test', type=str, default=os.environ['SM_CHANNEL_TEST'])
 
-    train(parser.parse_args())
+    parser.add_argument('--current-host', type=str, default=os.environ['SM_CURRENT_HOST'])
+    parser.add_argument('--hosts', type=list, default=json.loads(os.environ['SM_HOSTS']))
+
+    return parser.parse_args()
+
+if __name__ == '__main__':
+    args = parse_args()
+    num_gpus = int(os.environ['SM_NUM_GPUS'])
+
+    train(args.batch_size, args.epochs, args.learning_rate, num_gpus, args.train, args.test,
+          args.hosts, args.current_host, args.model_dir)
