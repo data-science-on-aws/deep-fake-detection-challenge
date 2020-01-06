@@ -57,10 +57,5 @@
 ### Notebook Examples using MXNet
 * https://docs.aws.amazon.com/sagemaker/latest/dg/mxnet.html
 
-### Extend the SageMaker Docker Images [TODO]
-* Convert the Notebook to a `train.py` File in Docker Image
-* Run this **Sample Notebook TODO**
-* Run the Docker Image as a SageMaker Training Job
-
 ### Extend the Deep Learning AMIs
 * AWS [Deep Learning AMIs](https://docs.aws.amazon.com/dlami/latest/devguide/what-is-dlami.html)
