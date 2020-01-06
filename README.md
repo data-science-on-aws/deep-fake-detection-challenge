@@ -23,10 +23,13 @@
 
 ## Step 7. Train a Model using SageMaker Notebooks
 ### TensorFlow
-* [**Sample TensorFlow notebook**](tensorflow/) using Distributed TensorFlow and SageMaker.
+* [**Sample TensorFlow Notebook**](tensorflow/) using Distributed TensorFlow and SageMaker.
 
 ### PyTorch
-* [**Sample PyTorch notebook**](pytorch/) using Distributed PyTorch and SageMaker.
+* [**Sample PyTorch Notebook**](pytorch/) using Distributed PyTorch and SageMaker.
+
+### MXNet
+* **Sample MXNet notebook Coming Soon** using Distributed MXNet and SageMaker.
 
 ### Other
 * To adapt a custom training script to SageMaker, please follow [**these instructions**](https://sagemaker.readthedocs.io/en/stable/using_tf.html#adapting-your-local-tensorflow-script).
@@ -51,10 +54,12 @@
 ### Notebook Examples using PyTorch
 * https://docs.aws.amazon.com/sagemaker/latest/dg/pytorch.html
 
-### Extend the SageMaker Docker Images
+### Notebook Examples using MXNet
+* https://docs.aws.amazon.com/sagemaker/latest/dg/mxnet.html
+
+### Extend the SageMaker Docker Images [TODO]
 * Convert the Notebook to a `train.py` File in Docker Image
-* Run this [sample notebook](examples/custom-sagemaker-container/notebook.ipynb)
-![Parameter Server](img/parameter_server.png)
+* Run this **Sample Notebook TODO**
 * Run the Docker Image as a SageMaker Training Job
 
 ### Extend the Deep Learning AMIs
