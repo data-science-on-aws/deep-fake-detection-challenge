@@ -57,5 +57,5 @@
 ### Notebook Examples using MXNet
 * https://docs.aws.amazon.com/sagemaker/latest/dg/mxnet.html
 
-### Extend the Deep Learning AMIs
-* AWS [Deep Learning AMIs](https://docs.aws.amazon.com/dlami/latest/devguide/what-is-dlami.html)
+### Extend the Deep Learning Containers
+* AWS [Deep Learning Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html)
