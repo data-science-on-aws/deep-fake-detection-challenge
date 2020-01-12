@@ -1,4 +1,6 @@
 ## Overview
+![](img/main.png)
+
 ### Blog Post
 [https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/](https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/)
 ### Challenge Page
