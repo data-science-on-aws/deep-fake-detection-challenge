@@ -40,23 +40,24 @@
 * Connect to a Public or Private GitHub or GitLab repo using [these](git-integration.md) instructions.
 
 ### Step 7. Train a Model using SageMaker Notebooks
-* [**Sample TensorFlow Notebook**](tensorflow/) using Distributed TensorFlow and SageMaker.
-* [**Sample PyTorch Notebook**](pytorch/) using Distributed PyTorch and SageMaker.
-* [**Sample MXNet Notebook**](mxnet/) using Distributed MXNet and SageMaker.
+* [Sample TensorFlow Notebook](tensorflow/) using Distributed TensorFlow and SageMaker.
+* [Sample PyTorch Notebook](pytorch/) using Distributed PyTorch and SageMaker.
+* [Sample MXNet Notebook](mxnet/) using Distributed MXNet and SageMaker.
 * To adapt a custom training script to SageMaker, please follow [**these instructions**](https://sagemaker.readthedocs.io/en/stable/using_tf.html#adapting-your-local-tensorflow-script).
 
-## Step 8. Submit your Notebook and Trained Model to Kaggle
-* [**Competition Code Requirements**](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
+## Step 8. Submit Notebook and Trained Model to Kaggle
+* [https://www.kaggle.com/gpreda/deepfake-starter-kit](https://www.kaggle.com/gpreda/deepfake-starter-kit)
+* [https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
 
 ## More AWS Resources
 ### Noteboook Examples using Tensorflow + Keras
-* https://docs.aws.amazon.com/sagemaker/latest/dg/tf.html
+https://docs.aws.amazon.com/sagemaker/latest/dg/tf.html
 
 ### Notebook Examples using PyTorch
-* https://docs.aws.amazon.com/sagemaker/latest/dg/pytorch.html
+https://docs.aws.amazon.com/sagemaker/latest/dg/pytorch.html
 
 ### Notebook Examples using MXNet
-* https://docs.aws.amazon.com/sagemaker/latest/dg/mxnet.html
+https://docs.aws.amazon.com/sagemaker/latest/dg/mxnet.html
 
 ### Extend the Deep Learning Containers
-* AWS [Deep Learning Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html)
+AWS [Deep Learning Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html)
