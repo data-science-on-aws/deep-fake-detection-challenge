@@ -43,7 +43,7 @@
 * [Sample TensorFlow Notebook](tensorflow/) using Distributed TensorFlow and SageMaker.
 * [Sample PyTorch Notebook](pytorch/) using Distributed PyTorch and SageMaker.
 * [Sample MXNet Notebook](mxnet/) using Distributed MXNet and SageMaker.
-* To adapt a custom training script to SageMaker, please follow [**these instructions**](https://sagemaker.readthedocs.io/en/stable/using_tf.html#adapting-your-local-tensorflow-script).
+* To adapt a custom training script to SageMaker, please follow [these instructions](https://sagemaker.readthedocs.io/en/stable/using_tf.html#adapting-your-local-tensorflow-script).
 
 ## Step 8. Submit Notebook and Trained Model to Kaggle
 * [https://www.kaggle.com/gpreda/deepfake-starter-kit](https://www.kaggle.com/gpreda/deepfake-starter-kit)
