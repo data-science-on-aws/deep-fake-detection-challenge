@@ -1,8 +1,5 @@
 [![](img/main.png)](https://deepfakedetectionchallenge.ai/)
 
-## AWS Blog Post
-[![](img/aws-blog.png)](https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/)
-
 ## Kaggle Competition
 [![](img/kaggle.png)](https://www.kaggle.com/c/deepfake-detection-challenge)
 
@@ -16,6 +13,7 @@
 [https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
 
 ## Use AWS to Train Your Model
+[![](img/aws-blog.png)](https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/)
 
 ### Step 1. Create and Activate an AWS Account
 * https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/ 
