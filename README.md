@@ -48,10 +48,7 @@
 ## Step 8. Submit your Notebook and Trained Model to Kaggle
 * [**Competition Code Requirements**](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
 
-## Extras
-### Introduction to SageMaker Instance Types
-* List of [SageMaker Instance Types](https://aws.amazon.com/sagemaker/pricing/instance-types/)
-
+## More AWS Resources
 ### Noteboook Examples using Tensorflow + Keras
 * https://docs.aws.amazon.com/sagemaker/latest/dg/tf.html
 
