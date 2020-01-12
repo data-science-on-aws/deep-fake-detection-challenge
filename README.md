@@ -1,7 +1,7 @@
 [![](img/main.png)](https://deepfakedetectionchallenge.ai/)
 
 ## AWS Blog Post
-[https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/](https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/)
+[![](img/aws-blog.png)](https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/)
 
 ## Kaggle Competition
 [![](img/kaggle.png)](https://www.kaggle.com/c/deepfake-detection-challenge)
