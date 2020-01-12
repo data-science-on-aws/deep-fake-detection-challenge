@@ -1,5 +1,5 @@
 ## Overview
-![](img/main.png)
+[![](img/main.png)](https://deepfakedetectionchallenge.ai/)
 
 ### Blog Post
 [https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/](https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/)
