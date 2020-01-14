@@ -3,15 +3,13 @@
 [![](img/kaggle.png)](https://www.kaggle.com/c/deepfake-detection-challenge)
 
 ### Kaggle Competition
-[https://www.kaggle.com/robikscube/kaggle-deepfake-detection-introduction](https://www.kaggle.com/robikscube/kaggle-deepfake-detection-introduction)
+[Introduction](https://www.kaggle.com/robikscube/kaggle-deepfake-detection-introduction)
 
-### Deep Fake Starter Kit
-[https://www.kaggle.com/gpreda/deepfake-starter-kit](https://www.kaggle.com/gpreda/deepfake-starter-kit)
+[Deep Fake Starter Kit](https://www.kaggle.com/gpreda/deepfake-starter-kit)
 
-### Competition Code Requirements
-[https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
+[Competition Code Requirements](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
 
-[https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/](https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/)
+[Request AWS Credits](https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/)
 
 ### Step 1:  Create and Activate Your AWS Account
 * https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/ 
