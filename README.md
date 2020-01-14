@@ -39,9 +39,7 @@
 ### Step 8:  Submit Your Trained Model to Kaggle
 * [Competition Code Requirements](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
 
-### Wish You Luck!
-
 ## More Resources
-### [Introduction](https://www.kaggle.com/robikscube/kaggle-deepfake-detection-introduction)
-### [Deep Fake Starter Kit](https://www.kaggle.com/gpreda/deepfake-starter-kit)
-### [Competition Code Requirements](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
+* [Kaggle Challenge Introduction](https://www.kaggle.com/robikscube/kaggle-deepfake-detection-introduction)
+* [Deepfake Starter Kit](https://www.kaggle.com/gpreda/deepfake-starter-kit)
+* [Competition Code Requirements](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
