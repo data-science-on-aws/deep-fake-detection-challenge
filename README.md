@@ -1,8 +1,5 @@
 [![](img/main.png)](https://deepfakedetectionchallenge.ai/)
 
-## AWS Blog Post
-[https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/](https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/)
-
 [![](img/kaggle.png)](https://www.kaggle.com/c/deepfake-detection-challenge)
 
 ### Kaggle Competition
@@ -13,6 +10,8 @@
 
 ### Competition Code Requirements
 [https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
+
+[https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/](https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/)
 
 ### Step 1:  Create and Activate Your AWS Account
 * https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/ 
@@ -49,16 +48,16 @@
 
 ## More Resources 
 ### Noteboook Examples using Tensorflow + Keras
-* https://docs.aws.amazon.com/sagemaker/latest/dg/tf.html
+https://docs.aws.amazon.com/sagemaker/latest/dg/tf.html
 
 ### Notebook Examples using PyTorch
-* https://docs.aws.amazon.com/sagemaker/latest/dg/pytorch.html
+https://docs.aws.amazon.com/sagemaker/latest/dg/pytorch.html
 
 ### Notebook Examples using MXNet
-* https://docs.aws.amazon.com/sagemaker/latest/dg/mxnet.html
+https://docs.aws.amazon.com/sagemaker/latest/dg/mxnet.html
 
 ### Introduction to SageMaker Instance Types
 * List of [SageMaker Instance Types](https://aws.amazon.com/sagemaker/pricing/instance-types/)
 
 ### Extend the Deep Learning Containers
-* AWS [Deep Learning Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html)
+AWS [Deep Learning Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html)
