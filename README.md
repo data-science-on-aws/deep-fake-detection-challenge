@@ -1,6 +1,5 @@
-[![](img/deep-fake-detection-challenge.png)](https://deepfakedetectionchallenge.ai/)
-
 ## Kaggle Competition
+[![](img/deep-fake-detection-challenge.png)](https://deepfakedetectionchallenge.ai/)
 [![](img/kaggle.png)](https://www.kaggle.com/c/deepfake-detection-challenge)
 
 ## Train Your Model with AWS
