@@ -1,8 +1,8 @@
 [![](img/deep-fake-detection-challenge.png)](https://deepfakedetectionchallenge.ai/)
 
+## Kaggle Competition
 [![](img/kaggle.png)](https://www.kaggle.com/c/deepfake-detection-challenge)
 
-## Kaggle Competition
 [Introduction](https://www.kaggle.com/robikscube/kaggle-deepfake-detection-introduction)
 
 [Deep Fake Starter Kit](https://www.kaggle.com/gpreda/deepfake-starter-kit)
