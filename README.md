@@ -46,18 +46,4 @@
 ### Step 8:  Submit Your Trained Model to Kaggle
 * [**Competition Code Requirements**](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
 
-## More Resources 
-### Noteboook Examples using Tensorflow + Keras
-https://docs.aws.amazon.com/sagemaker/latest/dg/tf.html
-
-### Notebook Examples using PyTorch
-https://docs.aws.amazon.com/sagemaker/latest/dg/pytorch.html
-
-### Notebook Examples using MXNet
-https://docs.aws.amazon.com/sagemaker/latest/dg/mxnet.html
-
-### Introduction to SageMaker Instance Types
-* List of [SageMaker Instance Types](https://aws.amazon.com/sagemaker/pricing/instance-types/)
-
-### Extend the Deep Learning Containers
-AWS [Deep Learning Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html)
+Good Luck!
