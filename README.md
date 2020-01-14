@@ -1,4 +1,4 @@
-[![](img/main.png)](https://deepfakedetectionchallenge.ai/)
+[![](img/deep-fake-detection-challenge.png)](https://deepfakedetectionchallenge.ai/)
 
 [![](img/kaggle.png)](https://www.kaggle.com/c/deepfake-detection-challenge)
 
