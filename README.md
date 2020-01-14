@@ -3,11 +3,11 @@
 ## Kaggle Competition
 [![](img/kaggle.png)](https://www.kaggle.com/c/deepfake-detection-challenge)
 
-[Introduction](https://www.kaggle.com/robikscube/kaggle-deepfake-detection-introduction)
+### [Introduction](https://www.kaggle.com/robikscube/kaggle-deepfake-detection-introduction)
 
-[Deep Fake Starter Kit](https://www.kaggle.com/gpreda/deepfake-starter-kit)
+### [Deep Fake Starter Kit](https://www.kaggle.com/gpreda/deepfake-starter-kit)
 
-[Competition Code Requirements](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
+### [Competition Code Requirements](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
 
 ## Train Your Model with AWS
 [![](img/aws-blog.png)](https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/)
