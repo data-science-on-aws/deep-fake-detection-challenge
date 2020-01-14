@@ -46,4 +46,4 @@
 ### Step 8:  Submit Your Trained Model to Kaggle
 * [**Competition Code Requirements**](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
 
-Good Luck!
+Wish You Luck!
