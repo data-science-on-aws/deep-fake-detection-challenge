@@ -11,7 +11,7 @@
 
 [Request AWS Credits!](https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/)
 
-[![(https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/)](https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/)]
+[![](img/aws-blog.png)](https://aws.amazon.com/blogs/machine-learning/aws-supports-the-deepfake-detection-challenge-with-competition-data-and-aws-credits/)
 
 ### Step 1:  Create and Activate Your AWS Account
 * https://aws.amazon.com/premiumsupport/knowledge-center/create-and-activate-aws-account/ 
