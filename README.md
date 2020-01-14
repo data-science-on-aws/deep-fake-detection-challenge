@@ -41,9 +41,9 @@
 * [**Sample TensorFlow Notebook**](tensorflow/) using Distributed TensorFlow and SageMaker.
 * [**Sample PyTorch Notebook**](pytorch/) using Distributed PyTorch and SageMaker.
 * [**Sample MXNet Notebook**](mxnet/) using Distributed MXNet and SageMaker.
-* To adapt a custom training script to SageMaker, please follow [**these instructions**](https://sagemaker.readthedocs.io/en/stable/using_tf.html#adapting-your-local-tensorflow-script).
+* To adapt a custom training script to SageMaker, please follow [these instructions](https://sagemaker.readthedocs.io/en/stable/using_tf.html#adapting-your-local-tensorflow-script).
 
 ### Step 8:  Submit Your Trained Model to Kaggle
-* [**Competition Code Requirements**](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
+* [Competition Code Requirements](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
 
-Wish You Luck!
+### Wish You Luck!
