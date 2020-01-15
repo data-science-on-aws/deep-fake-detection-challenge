@@ -29,13 +29,24 @@
 * Select “Jupyter” or “JupyterLab” to Launch the Notebook
 * Connect to a Public or Private GitHub or GitLab repo using [these](git-integration.md) instructions.
 
-### Step 7:  Train a Model Using Your SageMaker Notebook Instance
+### Step 7:  Clone this GitHub Repo
+* Open a New Terminal
+![](img/new-terminal.png)
+
+* Clone this Repo using the Following Command
+```
+cd ~/SageMaker
+
+git clone https://github.com/data-science-on-aws/deep-fake-detection-challenge
+```
+
+### Step 8:  Train a Model Using Your SageMaker Notebook Instance
 * [**Sample TensorFlow Notebook**](tensorflow/) using Distributed TensorFlow and SageMaker.
 * [**Sample PyTorch Notebook**](pytorch/) using Distributed PyTorch and SageMaker.
 * [**Sample MXNet Notebook**](mxnet/) using Distributed MXNet and SageMaker.
 * To adapt a custom training script to SageMaker, please follow [these instructions](https://sagemaker.readthedocs.io/en/stable/using_tf.html#adapting-your-local-tensorflow-script).
 
-### Step 8:  Submit Your Trained Model to Kaggle
+### Step 9:  Submit Your Trained Model to Kaggle
 * [Competition Code Requirements](https://www.kaggle.com/c/deepfake-detection-challenge/overview/code-requirements)
 
 ## More Resources
