@@ -17,10 +17,10 @@
 ### Step 4:  Choose a Region
 * Review the [Regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#sagemaker_region) supported by Amazon SageMaker 
 
-### Step 5:  Manage/Increase SageMaker Instance Limits
+### Step 5:  Manage/Increase SageMaker Instance Limits (see detailed instructions [here](quota-increase.md))
 * Review the [Default Limits](https://docs.aws.amazon.com/general/latest/gr/sagemaker.html#limits_sagemaker) for Amazon SageMaker Service Limits
-* Request a [Limit Increase](https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html) if Needed
-* Review the [SageMaker Instance Pricing](https://aws.amazon.com/sagemaker/pricing/instance-types/)
+* Request a [Limit Increase](quota-increase.md) if needed
+* Review the [SageMaker Instance Pricing](https://aws.amazon.com/sagemaker/pricing/instance-types/) for an overview of supported instance types
 
 ### Step 6:  Create a SageMaker Notebook Instance
 * Select an [Instance Type](https://aws.amazon.com/sagemaker/pricing/instance-types/)
