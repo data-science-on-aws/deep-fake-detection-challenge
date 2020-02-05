@@ -15,7 +15,7 @@ Please note that the service quotas may vary between different Amazon SageMaker 
 - Amazon SageMaker Batch Transform
 - Amazon SageMaker Ground Truth
 
-For model training you should look at the quota for ***Amazon SageMaker Training and Managed Spot Training***. 
+For model training you should look at the quota for **Amazon SageMaker Training and Managed Spot Training**. 
 
 ## Check my quota
 
@@ -24,7 +24,7 @@ For model training you should look at the quota for ***Amazon SageMaker Training
 
 You can request a quota increase using the AWS Support Center as follows:
 
-1. Open the AWS Support Center page (https://console.aws.amazon.com/support/home#/), and sign in if necessary.
+1. Open the [AWS Support Center](https://console.aws.amazon.com/support/home#/) (sign in if necessary)
 2. Choose ***Create case***
 3. Choose ***Service limit increase***.
 4. Conplete the form as needed. 
