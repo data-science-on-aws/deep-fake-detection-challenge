@@ -24,7 +24,22 @@ For model training you should look at the quota for **Amazon SageMaker Training 
 
 You can request a quota increase using the AWS Support Center as follows:
 
-1. Open the [AWS Support Center](https://console.aws.amazon.com/support/home#/) (sign in if necessary)
-2. Choose ***Create case***
-3. Choose ***Service limit increase***.
-4. Conplete the form as needed. 
+### 1. Open the [AWS Support Center](https://console.aws.amazon.com/support/home#/) (sign in if necessary)
+### 2. Choose ***Create case***
+![Open the AWS Support Center](img/support_center01.png)
+
+### 3. Choose ***Service limit increase***.
+![Open the AWS Support Center](img/support_center02.png)
+
+### 3. Fill in your request details
+![Open the AWS Support Center](img/support_center03.png)
+* Select the AWS Region you're working in
+* Select the relevant service, e.g. SageMaker Training
+* Select the limit to increase 
+(e.g. limits per instance type like ml.p3.8xlarge, or number of instances overall)
+* Set required new limit value
+
+### 4. Add a case description and contact options, and hit submit!
+![Open the AWS Support Center](img/support_center04.png)
+
+
