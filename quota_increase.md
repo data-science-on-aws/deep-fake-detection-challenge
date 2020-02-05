@@ -5,7 +5,7 @@ Unless otherwise noted, each quota is Region-specific.
 
 The default service quotas for Amazon SageMaker are listed [here](https://docs.aws.amazon.com/general/latest/gr/sagemaker.html#limits_sagemaker).
 
-Please note that the service quotas may vary between different Amazon SageMaker services as listed in the link shared above:
+Please note that the service quotas may vary between different Amazon SageMaker services as described in the link shared above:
 
 - Amazon SageMaker Notebooks
 - Amazon SageMaker Automatic Model Tuning
