@@ -19,7 +19,7 @@
 
 ### Step 5:  Manage/Increase SageMaker Instance Limits (see detailed instructions [here](quota-increase.md))
 * Review the [Default Limits](https://docs.aws.amazon.com/general/latest/gr/sagemaker.html#limits_sagemaker) for Amazon SageMaker Service Limits
-* Request a [Limit Increase](quota-increase.md) if needed
+* Request a [Limit Increase](quota-increase.md) if needed via the [AWS Support Center](https://console.aws.amazon.com/support/home#/)
 * Review the [SageMaker Instance Pricing](https://aws.amazon.com/sagemaker/pricing/instance-types/) for an overview of supported instance types
 
 ### Step 6:  Create a SageMaker Notebook Instance
