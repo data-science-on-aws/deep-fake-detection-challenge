@@ -3,7 +3,7 @@
 Your AWS account has default quotas, formerly referred to as limits, for each AWS service. 
 Unless otherwise noted, each quota is Region-specific. 
 
-The default service quotas for Amazon SageMaker are listed [here](https://docs.aws.amazon.com/general/latest/gr/sagemaker.html#limits_sagemaker).
+## The default service quotas for Amazon SageMaker are listed [here](https://docs.aws.amazon.com/general/latest/gr/sagemaker.html#limits_sagemaker).
 
 Please note that the service quotas may vary between different Amazon SageMaker services as described in the link shared above:
 
@@ -17,7 +17,11 @@ Please note that the service quotas may vary between different Amazon SageMaker 
 
 For model training you should look at the quota for **Amazon SageMaker Training and Managed Spot Training**. 
 
-## Check my quota
+## Which instance type do I need?
+
+Here's a list of [supported Amazon SageMaker instance types](https://aws.amazon.com/sagemaker/pricing/instance-types/) (ml.xxx) comparing the different instances in vCPU, GPU, Mem (GiB), GPU Mem (GiB) and Network Performance. 
+
+You find the GPU-based instance types at "Accelerated Computing – Current Generation". 
 
 
 ## Request quota increase
