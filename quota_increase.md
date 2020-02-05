@@ -1,8 +1,10 @@
-# How to increase your AWS Service Quotas for Amazon SageMaker
+# How to increase your AWS Service Quotas for 
+# Amazon SageMaker
 
 Your AWS account has default quotas, formerly referred to as limits, for each AWS service. 
 Unless otherwise noted, each quota is Region-specific. 
-The default service quotas for Amazon SageMaker are listed [here](https://docs.aws.amazon.com/general/latest/gr/sagemaker.html#limits_sagemaker):
+
+The default service quotas for Amazon SageMaker are listed [here](https://docs.aws.amazon.com/general/latest/gr/sagemaker.html#limits_sagemaker).
 
 Please note that the service quotas may vary between different Amazon SageMaker services as listed in the link shared above:
 
