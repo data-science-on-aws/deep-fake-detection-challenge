@@ -18,9 +18,11 @@
 * Review the [Regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#sagemaker_region) supported by Amazon SageMaker 
 
 ### Step 5:  Manage/Increase SageMaker Instance Limits (see detailed instructions [here](quota-increase.md))
+[![](img/support_center03.png)](quota-increase.md)
 * Review the [Default Limits](https://docs.aws.amazon.com/general/latest/gr/sagemaker.html#limits_sagemaker) for Amazon SageMaker Service Limits
 * Request a [Limit Increase](quota-increase.md) if needed via the [AWS Support Center](https://console.aws.amazon.com/support/home#/)
 * Review the [SageMaker Instance Pricing](https://aws.amazon.com/sagemaker/pricing/instance-types/) for an overview of supported instance types
+
 
 ### Step 6:  Create a SageMaker Notebook Instance
 * Select an [Instance Type](https://aws.amazon.com/sagemaker/pricing/instance-types/)
@@ -31,7 +33,7 @@
 
 ### Step 7:  Clone this GitHub Repo
 * Open a New Terminal
-![](img/new-terminal.png)
+![](img/new-terminal.png)()
 
 * Clone this Repo using the Following Command
 ```
